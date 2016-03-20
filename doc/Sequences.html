@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.4">
-    <title>Sequences – sequences v0.0.2</title>
+    <title>Sequences – sequences v1.0.0</title>
     <link rel="stylesheet" href="dist/app-1e374caa3d.css" />
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -27,7 +27,7 @@
         sequences
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.0.2
+        v1.0.0
       </h2>
     </div>
     
@@ -59,7 +59,7 @@
 
 
       <h1>
-        <small class="visible-xs">sequences v0.0.2</small>
+        <small class="visible-xs">sequences v1.0.0</small>
         Sequences
         
         
@@ -106,7 +106,7 @@
   </div>
   
     <div class="summary-synopsis"><p>An ascending Stream containing the even integers (A005843)</p>
-<h1>Example</h1>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -134,7 +134,7 @@
   </div>
   
     <div class="summary-synopsis"><p>An ascending Stream containing the nonnegative integers (A001477)</p>
-<h1>Example</h1>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -154,7 +154,7 @@
   </div>
   
     <div class="summary-synopsis"><p>An ascending Stream containing the odd integers (A005408)</p>
-<h1>Example</h1>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -164,7 +164,7 @@
   </div>
   
     <div class="summary-synopsis"><p>An infinite Stream of ones (A000012)</p>
-<h1>Example</h1>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -174,7 +174,7 @@
   </div>
   
     <div class="summary-synopsis"><p>An ascending Stream containing the positive integers (A000027)</p>
-<h1>Example</h1>
+<h2>Examples</h2>
 </div>
   
 </div>
@@ -238,7 +238,7 @@
   <section class="docstring">
     <p>An infinite Stream containing the Catalan numbers (A000108).</p>
 <p>Runs in O(n²), memory consumption is O(n²)</p>
-<h1>Definition:</h1>
+<h2>Definition:</h2>
 <ul>
 <li>C(0) = 1
 </li>
@@ -247,7 +247,7 @@
 <li>C(n) = Σ( C(i) * C(n-i)) for all i &lt;- 0 &lt;= i &lt; n
 </li>
 </ul>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.catalan |&gt; Enum.take(5)
 [1, 2, 5, 14, 42]</code></pre>
 
@@ -264,7 +264,7 @@
   
   <section class="docstring">
     <p>An ascending Stream containing the even integers (A005843)</p>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.even_integers |&gt; Enum.take(5)
 [0,2,4,6,8]</code></pre>
 
@@ -282,14 +282,14 @@
   <section class="docstring">
     <p>An infinite Stream containing the Factorial numbers (A000142).</p>
 <p>Runs in O(n)</p>
-<h1>Definition:</h1>
+<h2>Definition:</h2>
 <ul>
 <li>fact(0) = 1
 </li>
 <li>fact(n) = n * fact(n-1)
 </li>
 </ul>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.factorials |&gt; Enum.take(5)
 [1, 1, 2, 6, 24]</code></pre>
 
@@ -307,7 +307,7 @@
   <section class="docstring">
     <p>An infinite Stream containing the Fibonacci numbers (A000045).</p>
 <p>Runs in O(n)</p>
-<h1>Definition:</h1>
+<h2>Definition:</h2>
 <ul>
 <li>fib(0) = 1
 </li>
@@ -316,7 +316,7 @@
 <li>fib(n) = fib(n-1) + fib(n-2)
 </li>
 </ul>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.fibonacchi |&gt; Enum.take(5)
 [1, 1, 2, 3, 5]</code></pre>
 
@@ -333,7 +333,7 @@
   
   <section class="docstring">
     <p>An ascending Stream containing the nonnegative integers (A001477)</p>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.integers |&gt; Enum.take(5)
 [0,1,2,3,4]</code></pre>
 
@@ -351,9 +351,9 @@
   <section class="docstring">
     <p>Defines an infinitely continuing integer Stream, starting at <em>start</em> , with step <em>step</em> between values.
 <em>step</em> defaults to <code class="inline">1</code>.</p>
-<h1>Usage:</h1>
+<h2>Usage:</h2>
 <p>Sequences.integers(start, step)</p>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.integers(0,3) |&gt; Enum.take(5)
 [0,3,6,9,12]
 
@@ -373,7 +373,7 @@ iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
   
   <section class="docstring">
     <p>An ascending Stream containing the odd integers (A005408)</p>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.odd_integers |&gt; Enum.take(5)
 [1,3,5,7,9]</code></pre>
 
@@ -390,7 +390,7 @@ iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
   
   <section class="docstring">
     <p>An infinite Stream of ones (A000012)</p>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.ones |&gt; Enum.take(5)
 [1,1,1,1,1]</code></pre>
 
@@ -407,7 +407,7 @@ iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
   
   <section class="docstring">
     <p>An ascending Stream containing the positive integers (A000027)</p>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.positive_integers |&gt; Enum.take(5)
 [1,2,3,4,5]</code></pre>
 
@@ -426,7 +426,7 @@ iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
     <p>Defines an ascending integer Stream, containing the Prime numbers (A000040).</p>
 <p>This function uses <code class="inline">Sequences.Primes.trial_division</code> internally, although this might change in the future when more, faster prime-discovery methods are added.</p>
 <p>Runs in O(n*sqrt(n)/ln(n)²)</p>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.primes |&gt; Enum.take(10)
 [2,3,5,7,11,13,17,19,23,29]</code></pre>
 
@@ -443,7 +443,7 @@ iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
   
   <section class="docstring">
     <p>An infinite Stream containing the Triangular numbers (A000217).</p>
-<h1>Definition</h1>
+<h2>Definition</h2>
 <ul>
 <li>L(0) = 0
 </li>
@@ -452,7 +452,7 @@ iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
 <li>L(n) = L(n-2)+(2*n)-1
 </li>
 </ul>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.triangular |&gt; Enum.take(5)
 [0, 1, 3, 6, 10]</code></pre>
 
@@ -469,7 +469,7 @@ iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
   
   <section class="docstring">
     <p>An infinite Stream of zeroes (A000004)</p>
-<h1>Example:</h1>
+<h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.zeroes |&gt; Enum.take(5)
 [0,0,0,0,0]</code></pre>
 

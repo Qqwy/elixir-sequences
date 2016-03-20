@@ -11,8 +11,9 @@ defmodule Sequences.Helper do
 
   ## Examples: 
 
-    iex> Sequences.integers(0,2) |> Sequences.Helper.up_to_root(100) |> Enum.take(20)
-    [0,2,4,6,8]
+      iex> Sequences.integers(0,2) |> Sequences.Helper.up_to_root(100) |> Enum.take(20)
+      [0,2,4,6,8]
+      
   """
   def up_to_root(collection_of_numbers, max) do
     Stream.take_while collection_of_numbers, fn n -> n*n < max end 

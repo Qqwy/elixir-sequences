@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.4">
-    <title>Sequences.Helper – sequences v0.0.2</title>
+    <title>Sequences.Helper – sequences v1.0.0</title>
     <link rel="stylesheet" href="dist/app-1e374caa3d.css" />
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -27,7 +27,7 @@
         sequences
       </h1>
       <h2 class="sidebar-projectVersion">
-        v0.0.2
+        v1.0.0
       </h2>
     </div>
     
@@ -59,12 +59,17 @@
 
 
       <h1>
-        <small class="visible-xs">sequences v0.0.2</small>
+        <small class="visible-xs">sequences v1.0.0</small>
         Sequences.Helper
         
         
       </h1>
 
+      
+        <section id="moduledoc" class="docstring">
+          <p>This module contains a few helper methods for the creation and manipulation of certain Sequences.  </p>
+
+        </section>
       
 
       
@@ -87,11 +92,18 @@
     <a href="#divisible_by_any?/2">divisible_by_any?(num, list)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <em>num</em> is divisible by any element in <em>list</em> (otherwise <code class="inline">false</code>).
+Stops evaluating the list as soon as a match is found</p>
+</div>
+  
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#up_to_root/2">up_to_root(collection_of_numbers, max)</a>
   </div>
+  
+    <div class="summary-synopsis"><p>Takes elements from the given <code class="inline">collection_of_numbers</code> while the items in the collection are smaller than the square root of the given <code class="inline">max</code></p>
+</div>
   
 </div>
 
@@ -125,7 +137,9 @@
   </div>
   
   <section class="docstring">
-    
+    <p>Returns <code class="inline">true</code> if <em>num</em> is divisible by any element in <em>list</em> (otherwise <code class="inline">false</code>).
+Stops evaluating the list as soon as a match is found.</p>
+
   </section>
 </div>
 <div class="detail" id="up_to_root/2">
@@ -138,7 +152,12 @@
   </div>
   
   <section class="docstring">
-    
+    <p>Takes elements from the given <code class="inline">collection_of_numbers</code> while the items in the collection are smaller than the square root of the given <code class="inline">max</code>.</p>
+<p>It expects the collection_of_numbers to be in ascending format.</p>
+<h2>Examples:</h2>
+<p>  iex&gt; Sequences.integers(0,2) |&gt; Sequences.Helper.up_to_root(100) |&gt; Enum.take(20)
+  [0,2,4,6,8]</p>
+
   </section>
 </div>
 
