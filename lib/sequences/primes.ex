@@ -11,8 +11,8 @@ defmodule Sequences.Primes do
   
   # Example:
 
-      iex> Sequences.Primes.trial_division(0,3) |> Enum.take(10)
-      [2,3,5,7,11,13,17,19,23,27]
+      iex> Sequences.Primes.trial_division |> Enum.take(10)
+      [2,3,5,7,11,13,17,19,23,29]
   """
   def trial_division do
     Sequences.odd_integers # Start with the odd numbers.

@@ -7,6 +7,9 @@ defmodule Sequences do
 
 
   For efficiency, these sequences are calculated in a way that re-uses previously calculated results whenever possible.
+
+  See https://github.com/Qqwy/elixir-sequences for more information.
+
   """
 
 
@@ -190,7 +193,7 @@ defmodule Sequences do
   # Example:
  
       iex> Sequences.triangular |> Enum.take(5)
-      [0, 1, 3, 6, 10, 15]
+      [0, 1, 3, 6, 10]
 
 
   """
@@ -202,6 +205,23 @@ defmodule Sequences do
       end)
       |> Stream.map(&List.first/1)
     )
+  end
+
+  @doc """
+  Defines an ascending integer Stream, containing the Prime numbers (A000040).
+
+  This function uses `Sequences.Primes.trial_division` internally, although this might change in the future when more, faster prime-discovery methods are added.
+
+  Runs in O(n*sqrt(n)/ln(n)²)
+
+  
+  # Example:
+
+      iex> Sequences.primes |> Enum.take(10)
+      [2,3,5,7,11,13,17,19,23,29]
+  """
+  def primes do
+    Sequences.Primes.trial_division
   end
 
 end
