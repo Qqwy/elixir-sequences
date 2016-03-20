@@ -1,43 +1,39 @@
 defmodule Sequences.Primes do
 
+  @doc """
+  Defines an ascending integer Stream, containing the Prime numbers (A000040).
 
+  This function uses Trial Division to calculate primes;
+  For increased efficiency, only earlier-calculated primes are tested for divisibility.
+
+  Runs in O(n*sqrt(n)/ln(n)²)
+
+  
+  # Example:
+
+      iex> Sequences.Primes.trial_division(0,3) |> Enum.take(10)
+      [2,3,5,7,11,13,17,19,23,27]
+  """
   def trial_division do
-    odd_integers = Sequences.odd_integers
+    Sequences.odd_integers # Start with the odd numbers.
 
-    prime_lists = Stream.scan(odd_integers, [2],fn 
-      num, acc when num < 2 -> acc
+    # Test each of them by trial-dividing them against already-known prime numbers that are lower than itself.
+    # This transforms the list of odd numbers into a list of lists, where each sublist is a list of prime numbers <= to the odd number, in descending order.
+    |> Stream.scan([2],fn 
+      num, acc when num <= 2 -> 
+        acc # Catch the odd number `1`
       num, acc -> 
+        # Trial division. If prime, add to the accumulated primes list that is passed on.
         if Sequences.Helper.divisible_by_any?(num, acc) do
           acc
         else
           [num|acc]
         end
     end)
-    primes_with_duplicates = Stream.map prime_lists, &List.first/1
-    Stream.dedup primes_with_duplicates
-  
-  end
-  # This is broken, it hangs
-  def broken_trial_division do
-    integers = Sequences.integers
-    possible_primes = Stream.map(integers, fn 
-      n when n < 2 -> false 
-      2 -> 2
-      n ->
-        earlier_primes = Sequences.Helper.up_to_root(trial_division, n)
-        IO.inspect Enum.to_list earlier_primes
-        if earlier_primes |> Enum.any?(fn prime -> rem(n,prime) == 0 end) do
-          IO.puts "#{n} is no prime"
-          false
-        else
-          IO.puts "#{n} is prime"
-          n
-        end
-    end)
-    primes = Stream.filter possible_primes, &(&1)
+    # Take only the first (highest known) prime from each primes list.
+    |> Stream.map(&List.first/1)
+    # As each number that did not change the accumulator in the _scan_ step simply copied the primes list from the previous one, we're still left with duplicates. Remove them.
+    |> Stream.dedup
   end
 
-  defp get_primes(list) do
-    
-  end
 end
