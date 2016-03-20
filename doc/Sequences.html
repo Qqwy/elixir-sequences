@@ -1,0 +1,504 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.11.4">
+    <title>Sequences – sequences v0.0.2</title>
+    <link rel="stylesheet" href="dist/app-1e374caa3d.css" />
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
+
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        sequences
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.2
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">sequences v0.0.2</small>
+        Sequences
+        
+        
+      </h1>
+
+      
+        <section id="moduledoc" class="docstring">
+          <p>The Sequences module defines multiple methods that return a Stream of numbers, usually integers.</p>
+<p>The different Streams can be tapped in on-demand, by running any <code class="inline">Enum</code> function on them.
+<em>Be warned:</em> Do not use any function that iterates through the complete Stream. If you try this, <em>your code will hang</em>, as Elixir will never finish iterating through the infinite lists.</p>
+<p>For efficiency, these sequences are calculated in a way that re-uses previously calculated results whenever possible.</p>
+<p>See <a href="https://github.com/Qqwy/elixir-sequences">https://github.com/Qqwy/elixir-sequences</a> for more information.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#catalan/0">catalan()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>An infinite Stream containing the Catalan numbers (A000108)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#even_integers/0">even_integers()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>An ascending Stream containing the even integers (A005843)</p>
+<h1>Example</h1>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#factorials/0">factorials()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>An infinite Stream containing the Factorial numbers (A000142)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#fibonacchi/0">fibonacchi()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>An infinite Stream containing the Fibonacci numbers (A000045)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#integers/0">integers()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>An ascending Stream containing the nonnegative integers (A001477)</p>
+<h1>Example</h1>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#integers/2">integers(start, step \\ 1)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Defines an infinitely continuing integer Stream, starting at <em>start</em> , with step <em>step</em> between values.
+<em>step</em> defaults to <code class="inline">1</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#odd_integers/0">odd_integers()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>An ascending Stream containing the odd integers (A005408)</p>
+<h1>Example</h1>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#ones/0">ones()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>An infinite Stream of ones (A000012)</p>
+<h1>Example</h1>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#positive_integers/0">positive_integers()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>An ascending Stream containing the positive integers (A000027)</p>
+<h1>Example</h1>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#primes/0">primes()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Defines an ascending integer Stream, containing the Prime numbers (A000040)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#triangular/0">triangular()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>An infinite Stream containing the Triangular numbers (A000217)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#zeroes/0">zeroes()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>An infinite Stream of zeroes (A000004)</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="catalan/0">
+  <div class="detail-header">
+    <a href="#catalan/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">catalan()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>An infinite Stream containing the Catalan numbers (A000108).</p>
+<p>Runs in O(n²), memory consumption is O(n²)</p>
+<h1>Definition:</h1>
+<ul>
+<li>C(0) = 1
+</li>
+<li>C(1) = 1
+</li>
+<li>C(n) = Σ( C(i) * C(n-i)) for all i &lt;- 0 &lt;= i &lt; n
+</li>
+</ul>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.catalan |&gt; Enum.take(5)
+[1, 2, 5, 14, 42]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="even_integers/0">
+  <div class="detail-header">
+    <a href="#even_integers/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">even_integers()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>An ascending Stream containing the even integers (A005843)</p>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.even_integers |&gt; Enum.take(5)
+[0,2,4,6,8]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="factorials/0">
+  <div class="detail-header">
+    <a href="#factorials/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">factorials()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>An infinite Stream containing the Factorial numbers (A000142).</p>
+<p>Runs in O(n)</p>
+<h1>Definition:</h1>
+<ul>
+<li>fact(0) = 1
+</li>
+<li>fact(n) = n * fact(n-1)
+</li>
+</ul>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.factorials |&gt; Enum.take(5)
+[1, 1, 2, 6, 24]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="fibonacchi/0">
+  <div class="detail-header">
+    <a href="#fibonacchi/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">fibonacchi()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>An infinite Stream containing the Fibonacci numbers (A000045).</p>
+<p>Runs in O(n)</p>
+<h1>Definition:</h1>
+<ul>
+<li>fib(0) = 1
+</li>
+<li>fib(1) = 1
+</li>
+<li>fib(n) = fib(n-1) + fib(n-2)
+</li>
+</ul>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.fibonacchi |&gt; Enum.take(5)
+[1, 1, 2, 3, 5]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="integers/0">
+  <div class="detail-header">
+    <a href="#integers/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">integers()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>An ascending Stream containing the nonnegative integers (A001477)</p>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.integers |&gt; Enum.take(5)
+[0,1,2,3,4]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="integers/2">
+  <div class="detail-header">
+    <a href="#integers/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">integers(start, step \\ 1)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Defines an infinitely continuing integer Stream, starting at <em>start</em> , with step <em>step</em> between values.
+<em>step</em> defaults to <code class="inline">1</code>.</p>
+<h1>Usage:</h1>
+<p>Sequences.integers(start, step)</p>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.integers(0,3) |&gt; Enum.take(5)
+[0,3,6,9,12]
+
+iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
+[10,9,8,7,6]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="odd_integers/0">
+  <div class="detail-header">
+    <a href="#odd_integers/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">odd_integers()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>An ascending Stream containing the odd integers (A005408)</p>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.odd_integers |&gt; Enum.take(5)
+[1,3,5,7,9]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="ones/0">
+  <div class="detail-header">
+    <a href="#ones/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">ones()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>An infinite Stream of ones (A000012)</p>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.ones |&gt; Enum.take(5)
+[1,1,1,1,1]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="positive_integers/0">
+  <div class="detail-header">
+    <a href="#positive_integers/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">positive_integers()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>An ascending Stream containing the positive integers (A000027)</p>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.positive_integers |&gt; Enum.take(5)
+[1,2,3,4,5]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="primes/0">
+  <div class="detail-header">
+    <a href="#primes/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">primes()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Defines an ascending integer Stream, containing the Prime numbers (A000040).</p>
+<p>This function uses <code class="inline">Sequences.Primes.trial_division</code> internally, although this might change in the future when more, faster prime-discovery methods are added.</p>
+<p>Runs in O(n*sqrt(n)/ln(n)²)</p>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.primes |&gt; Enum.take(10)
+[2,3,5,7,11,13,17,19,23,29]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="triangular/0">
+  <div class="detail-header">
+    <a href="#triangular/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">triangular()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>An infinite Stream containing the Triangular numbers (A000217).</p>
+<h1>Definition</h1>
+<ul>
+<li>L(0) = 0
+</li>
+<li>L(1) = 1
+</li>
+<li>L(n) = L(n-2)+(2*n)-1
+</li>
+</ul>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.triangular |&gt; Enum.take(5)
+[0, 1, 3, 6, 10]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="zeroes/0">
+  <div class="detail-header">
+    <a href="#zeroes/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">zeroes()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>An infinite Stream of zeroes (A000004)</p>
+<h1>Example:</h1>
+<pre><code class="iex elixir">iex&gt; Sequences.zeroes |&gt; Enum.take(5)
+[0,0,0,0,0]</code></pre>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+      <button class="night-mode-toggle" />
+    </footer>
+  </div>
+</section>
+</div>
+  <script src="dist/app-6d2e071366.js"></script>
+  </body>
+</html>
+
