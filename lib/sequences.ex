@@ -104,8 +104,8 @@ defmodule Sequences do
 
   # Definition:
 
-  fact(0) = 1
-  fact(n) = n * fact(n-1)
+  - fact(0) = 1
+  - fact(n) = n * fact(n-1)
 
 
   # Example:
@@ -127,9 +127,9 @@ defmodule Sequences do
 
   # Definition:
   
-  fib(0) = 1
-  fib(1) = 1
-  fib(n) = fib(n-1) + fib(n-2)
+  - fib(0) = 1
+  - fib(1) = 1
+  - fib(n) = fib(n-1) + fib(n-2)
 
   # Example:
 
@@ -148,9 +148,9 @@ defmodule Sequences do
 
   # Definition:
   
-  C(0) = 1
-  C(1) = 1
-  C(n) = Σ( C(i) * C(n-i)) for all i <- 0 <= i < n
+  - C(0) = 1
+  - C(1) = 1
+  - C(n) = Σ( C(i) * C(n-i)) for all i <- 0 <= i < n
 
   # Example:
 
@@ -183,9 +183,9 @@ defmodule Sequences do
 
   # Definition
 
-  L(0) = 0
-  L(1) = 1
-  L(n) = L(n-2)+(2*n)-1
+  - L(0) = 0
+  - L(1) = 1
+  - L(n) = L(n-2)+(2*n)-1
 
   # Example:
  
