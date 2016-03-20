@@ -3,6 +3,7 @@
 
 [![hex.pm version](https://img.shields.io/hexpm/v/sequences.svg)](https://hex.pm/packages/sequences)
 
+[![Build Status](https://travis-ci.org/Qqwy/elixir-sequences.svg?branch=master)](https://travis-ci.org/Qqwy/elixir-sequences)
 
 This Elixir Module defines many useful integer sequences.
 
