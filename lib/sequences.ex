@@ -17,11 +17,11 @@ defmodule Sequences do
   Defines an infinitely continuing integer Stream, starting at *start* , with step *step* between values.
   *step* defaults to `1`.
 
-  # Usage:
+  ## Usage:
 
   Sequences.integers(start, step)
 
-  # Example:
+  ## Examples:
 
       iex> Sequences.integers(0,3) |> Enum.take(5)
       [0,3,6,9,12]
@@ -35,7 +35,7 @@ defmodule Sequences do
 
   @doc """
   An ascending Stream containing the nonnegative integers (A001477)
-  # Example:
+  ## Examples:
 
       iex> Sequences.integers |> Enum.take(5)
       [0,1,2,3,4]
@@ -46,7 +46,7 @@ defmodule Sequences do
 
   @doc """
   An ascending Stream containing the positive integers (A000027)
-  # Example:
+  ## Examples:
 
       iex> Sequences.positive_integers |> Enum.take(5)
       [1,2,3,4,5]
@@ -57,7 +57,7 @@ defmodule Sequences do
 
   @doc """
   An ascending Stream containing the odd integers (A005408)
-  # Example:
+  ## Examples:
 
       iex> Sequences.odd_integers |> Enum.take(5)
       [1,3,5,7,9]
@@ -68,7 +68,7 @@ defmodule Sequences do
 
   @doc """
   An ascending Stream containing the even integers (A005843)
-  # Example:
+  ## Examples:
 
       iex> Sequences.even_integers |> Enum.take(5)
       [0,2,4,6,8]
@@ -80,7 +80,7 @@ defmodule Sequences do
   @doc """ 
   An infinite Stream of zeroes (A000004)
 
-  # Example:
+  ## Examples:
 
       iex> Sequences.zeroes |> Enum.take(5)
       [0,0,0,0,0]
@@ -91,7 +91,7 @@ defmodule Sequences do
 
   @doc """ 
   An infinite Stream of ones (A000012)
-  # Example:
+  ## Examples:
 
       iex> Sequences.ones |> Enum.take(5)
       [1,1,1,1,1]
@@ -105,13 +105,13 @@ defmodule Sequences do
 
   Runs in O(n)
 
-  # Definition:
+  ## Definition:
 
   - fact(0) = 1
   - fact(n) = n * fact(n-1)
 
 
-  # Example:
+  ## Examples:
 
       iex> Sequences.factorials |> Enum.take(5)
       [1, 1, 2, 6, 24]
@@ -128,13 +128,13 @@ defmodule Sequences do
 
   Runs in O(n)
 
-  # Definition:
+  ## Definition:
   
   - fib(0) = 1
   - fib(1) = 1
   - fib(n) = fib(n-1) + fib(n-2)
 
-  # Example:
+  ## Examples:
 
       iex> Sequences.fibonacchi |> Enum.take(5)
       [1, 1, 2, 3, 5]
@@ -149,13 +149,13 @@ defmodule Sequences do
 
   Runs in O(n²), memory consumption is O(n²)
 
-  # Definition:
+  ## Definition:
   
   - C(0) = 1
   - C(1) = 1
   - C(n) = Σ( C(i) * C(n-i)) for all i <- 0 <= i < n
 
-  # Example:
+  ## Examples:
 
       iex> Sequences.catalan |> Enum.take(5)
       [1, 2, 5, 14, 42]
@@ -184,13 +184,13 @@ defmodule Sequences do
   @doc """
   An infinite Stream containing the Triangular numbers (A000217).
 
-  # Definition
+  ## Definition
 
   - L(0) = 0
   - L(1) = 1
   - L(n) = L(n-2)+(2*n)-1
 
-  # Example:
+  ## Examples:
  
       iex> Sequences.triangular |> Enum.take(5)
       [0, 1, 3, 6, 10]
@@ -215,7 +215,7 @@ defmodule Sequences do
   Runs in O(n*sqrt(n)/ln(n)²)
 
   
-  # Example:
+  ## Examples:
 
       iex> Sequences.primes |> Enum.take(10)
       [2,3,5,7,11,13,17,19,23,29]

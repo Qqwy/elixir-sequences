@@ -1,8 +1,7 @@
 defmodule SequencesTest do
   use ExUnit.Case
   doctest Sequences
+  doctest Sequences.Primes
+  doctest Sequences.Helper
 
-  test "the truth" do
-    assert 1 + 1 == 2
-  end
 end

@@ -9,7 +9,7 @@ defmodule Sequences.Primes do
   Runs in O(n*sqrt(n)/ln(n)²)
 
   
-  # Example:
+  ## Examples:
 
       iex> Sequences.Primes.trial_division |> Enum.take(10)
       [2,3,5,7,11,13,17,19,23,29]
