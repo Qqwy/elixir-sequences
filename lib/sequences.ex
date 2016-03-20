@@ -35,6 +35,7 @@ defmodule Sequences do
 
   @doc """
   An ascending Stream containing the nonnegative integers (A001477)
+  
   ## Examples:
 
       iex> Sequences.integers |> Enum.take(5)
@@ -46,6 +47,7 @@ defmodule Sequences do
 
   @doc """
   An ascending Stream containing the positive integers (A000027)
+  
   ## Examples:
 
       iex> Sequences.positive_integers |> Enum.take(5)
@@ -57,6 +59,7 @@ defmodule Sequences do
 
   @doc """
   An ascending Stream containing the odd integers (A005408)
+  
   ## Examples:
 
       iex> Sequences.odd_integers |> Enum.take(5)
@@ -68,6 +71,7 @@ defmodule Sequences do
 
   @doc """
   An ascending Stream containing the even integers (A005843)
+  
   ## Examples:
 
       iex> Sequences.even_integers |> Enum.take(5)
@@ -91,6 +95,7 @@ defmodule Sequences do
 
   @doc """ 
   An infinite Stream of ones (A000012)
+
   ## Examples:
 
       iex> Sequences.ones |> Enum.take(5)

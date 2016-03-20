@@ -155,8 +155,8 @@ Stops evaluating the list as soon as a match is found.</p>
     <p>Takes elements from the given <code class="inline">collection_of_numbers</code> while the items in the collection are smaller than the square root of the given <code class="inline">max</code>.</p>
 <p>It expects the collection_of_numbers to be in ascending format.</p>
 <h2>Examples:</h2>
-<p>  iex&gt; Sequences.integers(0,2) |&gt; Sequences.Helper.up_to_root(100) |&gt; Enum.take(20)
-  [0,2,4,6,8]</p>
+<pre><code class="iex elixir">iex&gt; Sequences.integers(0,2) |&gt; Sequences.Helper.up_to_root(100) |&gt; Enum.take(20)
+[0,2,4,6,8]</code></pre>
 
   </section>
 </div>
