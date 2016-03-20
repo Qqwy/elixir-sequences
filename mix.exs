@@ -3,7 +3,7 @@ defmodule Sequences.Mixfile do
 
   def project do
     [app: :sequences,
-     version: "0.0.1",
+     version: "0.0.2",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -29,7 +29,9 @@ defmodule Sequences.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:ex_doc, "~> 0.11", only: [:dev]}
+    ]
   end
 
 
@@ -50,8 +52,8 @@ defmodule Sequences.Mixfile do
   end
 
   defp package do
-    [# These are the default files included in the package
-     files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+    [
+     files: ["lib", "mix.exs", "README*", "LICENSE*"],
      maintainers: ["Qqwy"],
      licenses: ["MIT"],
      links: %{"GitHub" => "https://github.com/Qqwy/elixir-sequences"}]
