@@ -48,7 +48,7 @@ This package is [available in Hex](https://hex.pm/packages/sequences)
   1. Add sequences to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:sequences, "~> 0.0.1"}]
+          [{:sequences, "~> 1.0.0"}]
         end
 
   2. Ensure sequences is started before your application:
