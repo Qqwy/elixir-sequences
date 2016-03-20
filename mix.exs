@@ -42,10 +42,24 @@ defmodule Sequences.Mixfile do
   The Sequences module defines multiple methods that return a Stream of numbers, usually integers.
   
   The different Streams can be tapped in on-demand, by running any `Enum` function on them.
-  Be warned: Do not use any function that iterates through the complete Stream. If you try this, your code will hang, as Elixir will never finish iterating through the infinite lists.
-
 
   For efficiency, these sequences are calculated in a way that re-uses previously calculated results whenever possible.
+
+
+  List of included sequences:
+
+  • Sequences.integers(start, step): a helper function to create any kind of lazy integer sequence with a regular step distance.
+  • Sequences.integers
+  • Sequences.positive_integers 
+  • Sequences.odd_integers
+  • Sequences.even_integers
+  • Sequences.zeroes
+  • Sequences.ones
+  • Sequences.factorials
+  • Sequences.fibonacci
+  • Sequences.catalan
+  • Sequences.triangular
+  • Sequences.primes
 
   """
   end

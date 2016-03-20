@@ -1,6 +1,8 @@
 
 # Sequences
 
+[![hex.pm version](https://img.shields.io/hexpm/v/sequences.svg)](https://hex.pm/packages/sequences)
+
 
 This Elixir Module defines many useful integer sequences.
 
@@ -41,7 +43,7 @@ There are multiple known ways to generate prime numbers. Because each of these v
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+This package is [available in Hex](https://hex.pm/packages/sequences)
 
   1. Add sequences to your list of dependencies in `mix.exs`:
 
