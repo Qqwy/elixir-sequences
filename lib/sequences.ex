@@ -284,7 +284,7 @@ defmodule Sequences do
 
   """
   def squareroot_decimals(n) do
-    {integer_part, decimals} = squareroot_tuple(n)
+    {_, decimals} = squareroot_tuple(n)
     decimals
   end
 
