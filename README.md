@@ -17,18 +17,22 @@ Repository: [https://github.com/Qqwy/elixir-sequences](https://github.com/Qqwy/e
 
 ## List of included sequences:
 
-- Sequences.integers(start, step): a helper function to create any kind of lazy integer sequence with a regular step distance.
-- Sequences.integers
-- Sequences.positive_integers 
-- Sequences.odd_integers
-- Sequences.even_integers
-- Sequences.zeroes
-- Sequences.ones
-- Sequences.factorials
-- Sequences.fibonacci
-- Sequences.catalan
-- Sequences.triangular
-- Sequences.primes
+- `Sequences.integers(start, step)`: a helper function to create any kind of lazy integer sequence with a regular step distance.
+- `Sequences.integers`
+- `Sequences.positive_integers` 
+- `Sequences.odd_integers`
+- `Sequences.even_integers`
+- `Sequences.zeroes`
+- `Sequences.ones`
+- `Sequences.factorials`
+- `Sequences.fibonacci`
+- `Sequences.catalan`
+- `Sequences.triangular`
+- `Sequences.primes`
+- `Sequences.squareroot_tuple(n)`: Returns a tuple with an integer part (single integer number) and decimal part (digit stream)
+- `Sequences.squareroot_tuple(n, num_of_digits)`: Returns a tuple with an integer part (single integer number) and decimal part (digit list with given length)
+- `Sequences.squareroot_decimals(n)`: Returns decimal stream of the decimal expansion of a square root.
+- `Sequences.squareroot_expansion/1`: Returns a digit stream of the decimal expansion of a square root, including the digits of the integral part at the front.
 
 ## A note on Prime numbers
 
@@ -48,7 +52,7 @@ This package is [available in Hex](https://hex.pm/packages/sequences)
   1. Add sequences to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:sequences, "~> 1.0.0"}]
+          [{:sequences, "~> 1.1.0"}]
         end
 
   2. Ensure sequences is started before your application:
@@ -57,3 +61,7 @@ This package is [available in Hex](https://hex.pm/packages/sequences)
           [applications: [:sequences]]
         end
 
+## Changelog
+
+- 1.1.0: Sequences for square root expansions.
+- 1.0.0: First fully-functional version.

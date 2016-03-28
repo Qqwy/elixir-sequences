@@ -3,7 +3,7 @@ defmodule Sequences.Mixfile do
 
   def project do
     [app: :sequences,
-     version: "1.0.0",
+     version: "1.1.0",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -32,7 +32,9 @@ defmodule Sequences.Mixfile do
     [
       {:earmark, ">= 0.0.0", only: [:dev]}, # Markdown, dependency of ex_doc
       {:ex_doc, "~> 0.11", only: [:dev]},    # Documentation for Hex.pm
-      {:math, git: "https://github.com/qqwy/math", tag: "v0.0.2"}
+      # Used for the integer square root calculation.
+      # TODO: Re-point to master math library as soon as functionality is merged in master branch.
+      {:math, git: "https://github.com/qqwy/math", tag: "v0.0.2"} 
     ]
   end
 
@@ -61,6 +63,10 @@ defmodule Sequences.Mixfile do
   • Sequences.catalan
   • Sequences.triangular
   • Sequences.primes
+  • Sequences.squareroot_tuple(n): Returns a tuple with an integer part (single integer number) and decimal part (digit stream)
+  • Sequences.squareroot_tuple(n, num_of_digits): Returns a tuple with an integer part (single integer number) and decimal part (digit list with given length)
+  • Sequences.squareroot_decimals(n): Returns decimal stream of the decimal expansion of a square root.
+  • Sequences.squareroot_expansion/1: Returns a digit stream of the decimal expansion of a square root, including the digits of the integral part at the front.
 
   """
   end
