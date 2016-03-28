@@ -35,5 +35,4 @@ defmodule Sequences.Primes do
     # As each number that did not change the accumulator in the _scan_ step simply copied the primes list from the previous one, we're still left with duplicates. Remove them.
     |> Stream.dedup
   end
-
 end

@@ -229,5 +229,14 @@ defmodule Sequences do
     Sequences.Primes.trial_division
   end
 
+  def root_expansion(n) do
+    Stream.iterate({5 * n, 5}, fn {a, b} -> 
+      if a >= b do
+        {a - b, b + 10}
+      else
+        {a * 100, ((b - 5) * 10) + 5 
+      end
+    end)
+  end
 end
 
