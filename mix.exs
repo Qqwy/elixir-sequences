@@ -31,7 +31,8 @@ defmodule Sequences.Mixfile do
   defp deps do
     [
       {:earmark, ">= 0.0.0", only: [:dev]}, # Markdown, dependency of ex_doc
-      {:ex_doc, "~> 0.11", only: [:dev]}    # Documentation for Hex.pm
+      {:ex_doc, "~> 0.11", only: [:dev]},    # Documentation for Hex.pm
+      {:math, git: "https://github.com/qqwy/math", tag: "v0.0.2"}
     ]
   end
 
