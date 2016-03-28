@@ -1,5 +1,5 @@
 defmodule SequencesTest do
-  use ExUnit.Case, async: true
+  use ExUnit.Case
   doctest Sequences
   doctest Sequences.Primes
   doctest Sequences.Helper
