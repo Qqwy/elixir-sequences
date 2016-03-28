@@ -1,4 +1,6 @@
 defmodule Sequences do
+  import Math
+
   @moduledoc """
   The Sequences module defines multiple methods that return a Stream of numbers, usually integers.
   
@@ -228,6 +230,103 @@ defmodule Sequences do
   def primes do
     Sequences.Primes.trial_division
   end
+
+
+  @doc """
+  Returns a tuple where the first value is the integer square root of *n*, and the second value is a Stream that contains the decimal expansion of the square root of *n*.
+
+  The decimal expansion is calculated using the Square Roots By Extraction technique [described here](http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf).
+
+  ## Examples
+
+      iex> {a, b} = Sequences.squareroot_tuple(42); {a, Enum.take(b, 10)}
+      {6, [4, 8, 0, 7, 4, 0, 6, 9, 8, 4]}
+  """
+
+  def squareroot_tuple(n) do
+    integer_part = isqrt(n)
+    integer_part_length = Integer.digits(integer_part) |> Enum.count 
+    expansion = squareroot_expansion(n) |> Stream.drop(integer_part_length)
+    {integer_part, expansion}
+  end
+
+  @doc """
+  Returns a tuple where the first value is the integer square root of *n*, and the second value is a List that contains *amount_of_digits* digits of the decimal expansion of the square root of *n*.
+  
+
+  The decimal expansion is calculated using the Square Roots By Extraction technique [described here](http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf).
+
+  ## Examples
+
+      iex> Sequences.squareroot_tuple(100, 3)
+      {10, [0, 0, 0]}
+      iex> Sequences.squareroot_tuple(2, 10)
+      {1, [4, 1, 4, 2, 1, 3, 5, 6, 2, 3]}
+      iex> Sequences.squareroot_tuple(82, 10)
+      {9, [0, 5, 5, 3, 8, 5, 1, 3, 8, 1]}
+  """
+  def squareroot_tuple(n, amount_of_digits) do
+    {integer_part, expansion} = squareroot_tuple(n)
+    {integer_part, expansion |> Enum.take(amount_of_digits)}
+  end
+
+  @doc """
+  Returns a Stream of values 1-9, representing the decimal expansion of the square root of *n*.
+
+  The decimal expansion is calculated using the Square Roots By Extraction technique [described here](http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf).
+  
+  ## Examples
+
+      iex> Sequences.squareroot_decimals(2) |> Enum.take(20)
+      [4, 1, 4, 2, 1, 3, 5, 6, 2, 3, 7, 3, 0, 9, 5, 0, 4, 8, 8, 0]
+      iex> Sequences.squareroot_decimals(100) |> Enum.take(20)
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+  """
+  def squareroot_decimals(n) do
+    {_, decimals} = squareroot_tuple(n)
+    decimals
+  end
+
+  @doc """
+  Returns a Stream of values 1-9, representing the decimal expansion of the square root of *n*.
+
+  Note that `squareroot_expansion/1` does not strip away the integral part at the front. Use `squareroot_decimals/1` for that.
+
+  The decimal expansion is calculated using the Square Roots By Extraction technique [described here](http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf).
+
+  ## Examples
+
+      iex> Sequences.squareroot_expansion(2) |> Enum.take(20)
+      [1, 4, 1, 4, 2, 1, 3, 5, 6, 2, 3, 7, 3, 0, 9, 5, 0, 4, 8, 8]
+      iex> Sequences.squareroot_expansion(100) |> Enum.take(20)
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  """
+  def squareroot_expansion(n) do
+
+    # 1. Use the technique outlined here: http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf
+    Stream.iterate({5 * n, 5}, fn {a, b} -> 
+      if a >= b do
+        {a - b, b + 10}
+      else
+        {a * 100, ((b - 5) * 10) + 5 }
+      end
+    end)
+    # 2. Only take b's. Convert to strings. Remove trailing 005's, remove one final digit to ensure enough precision.
+    |> Stream.map( fn {_, b} -> clean_b = div((b-5),1000)
+      if clean_b == 0 do # Strips the unfinished b's containing '5', '105', etc from the results.
+        []
+      else
+       Integer.digits(clean_b)
+      end
+   end)
+    # 4. Only emit results if they are the last iteration with a certain number of digits.
+    |> Stream.dedup_by(&Enum.count/1)
+    |> Stream.map(&List.last/1)
+    |> Stream.drop(1) # Drops the first item, which is 'nil'
+
+  end
+
 
 end
 
