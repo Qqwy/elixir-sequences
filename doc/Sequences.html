@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.11.4">
-    <title>Sequences – sequences v1.0.0</title>
+    <title>Sequences – sequences v1.2.0</title>
     <link rel="stylesheet" href="dist/app-1e374caa3d.css" />
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -27,7 +27,7 @@
         sequences
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.0.0
+        v1.2.0
       </h2>
     </div>
     
@@ -59,7 +59,7 @@
 
 
       <h1>
-        <small class="visible-xs">sequences v1.0.0</small>
+        <small class="visible-xs">sequences v1.2.0</small>
         Sequences
         
         
@@ -166,6 +166,51 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
+    <a href="#pell_lucas_numbers/0">pell_lucas_numbers()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns an infinite stream of Pell-Lucas numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#pell_numbers/0">pell_numbers()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns an infinite stream of Pell numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#pell_rationals/0">pell_rationals()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns an infinite stream of Rational numbers, combining both the Pell numbers and the Pell-Lucas numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#pell_tuples/0">pell_tuples()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns an infinite stream of tuples, combining both the Pell numbers and the Pell-Lucas numbers</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#pi/0">pi()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a stream of digits of the mathematical constant π (pi) including the starting <code class="inline">3</code>, using Gibbons’ Spigot algorithm</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
     <a href="#positive_integers/0">positive_integers()</a>
   </div>
   
@@ -179,6 +224,42 @@
   </div>
   
     <div class="summary-synopsis"><p>Defines an ascending integer Stream, containing the Prime numbers (A000040)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#squareroot_decimals/1">squareroot_decimals(n)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#squareroot_expansion/1">squareroot_expansion(n)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#squareroot_tuple/1">squareroot_tuple(n)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a Stream that contains the decimal expansion of the square root of <em>n</em></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#squareroot_tuple/2">squareroot_tuple(n, amount_of_digits)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a List that contains <em>amount_of_digits</em> digits of the decimal expansion of the square root of <em>n</em></p>
 </div>
   
 </div>
@@ -391,6 +472,90 @@ iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
 
   </section>
 </div>
+<div class="detail" id="pell_lucas_numbers/0">
+  <div class="detail-header">
+    <a href="#pell_lucas_numbers/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">pell_lucas_numbers()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns an infinite stream of Pell-Lucas numbers.</p>
+<p>Pell-Lucas numbers are the numerators of the closest rational approximations to the square root of 2.</p>
+
+  </section>
+</div>
+<div class="detail" id="pell_numbers/0">
+  <div class="detail-header">
+    <a href="#pell_numbers/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">pell_numbers()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns an infinite stream of Pell numbers.</p>
+<p>Pell numbers are the denominators of the closest rational approximations to the square root of 2.</p>
+
+  </section>
+</div>
+<div class="detail" id="pell_rationals/0">
+  <div class="detail-header">
+    <a href="#pell_rationals/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">pell_rationals()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns an infinite stream of Rational numbers, combining both the Pell numbers and the Pell-Lucas numbers.</p>
+<p>These Rational numbers form the approximations to the square root of 2.
+The Rationals are constructed using the <code class="inline">Ratio</code> library.</p>
+<h2>Examples:</h2>
+<pre><code class="iex elixir">iex&gt; Enum.take Sequences.pell_rationals, 10
+[1, 3 &lt;|&gt; 2, 7 &lt;|&gt; 5, 17 &lt;|&gt; 12, 41 &lt;|&gt; 29, 99 &lt;|&gt; 70, 239 &lt;|&gt; 169, 577 &lt;|&gt; 408,
+1393 &lt;|&gt; 985, 3363 &lt;|&gt; 2378]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="pell_tuples/0">
+  <div class="detail-header">
+    <a href="#pell_tuples/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">pell_tuples()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns an infinite stream of tuples, combining both the Pell numbers and the Pell-Lucas numbers.</p>
+<p>These tuples form the closest rational approximations to the square root of 2.</p>
+
+  </section>
+</div>
+<div class="detail" id="pi/0">
+  <div class="detail-header">
+    <a href="#pi/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">pi()</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a stream of digits of the mathematical constant π (pi) including the starting <code class="inline">3</code>, using Gibbons’ Spigot algorithm.</p>
+<p>This algorithm(see <a href="http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/spigot.pdf">http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/spigot.pdf</a>) is less fast than dedicated algorithms with a specified and fixed upper bound, 
+but it has the advantage that you can specify exactly how many digits you need at a later time.</p>
+<h2>Examples:</h2>
+<pre><code class="iex elixir">iex&gt; Sequences.pi |&gt; Enum.take(20)
+[3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3, 2, 3, 8, 4]</code></pre>
+
+  </section>
+</div>
 <div class="detail" id="positive_integers/0">
   <div class="detail-header">
     <a href="#positive_integers/0" class="detail-link" title="Link to this function">
@@ -424,6 +589,87 @@ iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
 <h2>Examples:</h2>
 <pre><code class="iex elixir">iex&gt; Sequences.primes |&gt; Enum.take(10)
 [2,3,5,7,11,13,17,19,23,29]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="squareroot_decimals/1">
+  <div class="detail-header">
+    <a href="#squareroot_decimals/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">squareroot_decimals(n)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em>.</p>
+<p>The decimal expansion is calculated using the Square Roots By Extraction technique <a href="http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf">described here</a>.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Sequences.squareroot_decimals(2) |&gt; Enum.take(20)
+[4, 1, 4, 2, 1, 3, 5, 6, 2, 3, 7, 3, 0, 9, 5, 0, 4, 8, 8, 0]
+iex&gt; Sequences.squareroot_decimals(100) |&gt; Enum.take(20)
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="squareroot_expansion/1">
+  <div class="detail-header">
+    <a href="#squareroot_expansion/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">squareroot_expansion(n)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em>.</p>
+<p>Note that <a href="#squareroot_expansion/1"><code class="inline">squareroot_expansion/1</code></a> does not strip away the integral part at the front. Use <a href="#squareroot_decimals/1"><code class="inline">squareroot_decimals/1</code></a> for that.</p>
+<p>The decimal expansion is calculated using the Square Roots By Extraction technique <a href="http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf">described here</a>.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Sequences.squareroot_expansion(2) |&gt; Enum.take(20)
+[1, 4, 1, 4, 2, 1, 3, 5, 6, 2, 3, 7, 3, 0, 9, 5, 0, 4, 8, 8]
+iex&gt; Sequences.squareroot_expansion(100) |&gt; Enum.take(20)
+[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="squareroot_tuple/1">
+  <div class="detail-header">
+    <a href="#squareroot_tuple/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">squareroot_tuple(n)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a Stream that contains the decimal expansion of the square root of <em>n</em>.</p>
+<p>The decimal expansion is calculated using the Square Roots By Extraction technique <a href="http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf">described here</a>.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; {a, b} = Sequences.squareroot_tuple(42); {a, Enum.take(b, 10)}
+{6, [4, 8, 0, 7, 4, 0, 6, 9, 8, 4]}</code></pre>
+
+  </section>
+</div>
+<div class="detail" id="squareroot_tuple/2">
+  <div class="detail-header">
+    <a href="#squareroot_tuple/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">squareroot_tuple(n, amount_of_digits)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a List that contains <em>amount_of_digits</em> digits of the decimal expansion of the square root of <em>n</em>.</p>
+<p>The decimal expansion is calculated using the Square Roots By Extraction technique <a href="http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf">described here</a>.</p>
+<h2>Examples</h2>
+<pre><code class="iex elixir">iex&gt; Sequences.squareroot_tuple(100, 3)
+{10, [0, 0, 0]}
+iex&gt; Sequences.squareroot_tuple(2, 10)
+{1, [4, 1, 4, 2, 1, 3, 5, 6, 2, 3]}
+iex&gt; Sequences.squareroot_tuple(82, 10)
+{9, [0, 5, 5, 3, 8, 5, 1, 3, 8, 1]}</code></pre>
 
   </section>
 </div>
