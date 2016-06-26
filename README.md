@@ -21,7 +21,7 @@ Repository: [https://github.com/Qqwy/elixir-sequences](https://github.com/Qqwy/e
 - `Sequences.integers`
 - `Sequences.positive_integers` 
 - `Sequences.odd_integers`
-- `Sequences.even_integers`
+- `Sequences.even_integers` 
 - `Sequences.zeroes`
 - `Sequences.ones`
 - `Sequences.factorials`

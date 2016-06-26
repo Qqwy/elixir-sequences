@@ -34,7 +34,8 @@ defmodule Sequences.Mixfile do
       {:ex_doc, "~> 0.11", only: [:dev]},    # Documentation for Hex.pm
       # Used for the integer square root calculation.
       # TODO: Re-point to master math library as soon as functionality is merged in master branch.
-      {:math, git: "https://github.com/qqwy/math", tag: "v0.0.2"} 
+      {:ratio, ">= 1.0.0"},
+      {:math, ">= 0.1.0"} 
     ]
   end
 
