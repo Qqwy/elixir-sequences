@@ -1,5 +1,6 @@
 defmodule Sequences do
   import Math
+  use Ratio, override_math: false
 
   @moduledoc """
   The Sequences module defines multiple methods that return a Stream of numbers, usually integers.
@@ -215,6 +216,73 @@ defmodule Sequences do
   end
 
   @doc """
+  Returns an infinite stream of Pell numbers.
+
+  Pell numbers are the denominators of the closest rational approximations to the square root of 2.
+  """
+  def pell_numbers do
+    Stream.concat(
+      [0], #Base case
+      Stream.iterate(
+        [1, 0], fn [n, prev] ->
+          [prev + (n*2), n]
+        end
+      )
+      |> Stream.map(&List.first/1)
+    )
+    |> Stream.drop(1)
+  end
+
+  @doc """
+  Returns an infinite stream of Pell-Lucas numbers.
+
+  Pell-Lucas numbers are the numerators of the closest rational approximations to the square root of 2.
+  """
+  def pell_lucas_numbers do
+    Stream.concat(
+      [2], # Base case
+      Stream.iterate(
+        [2, 2], fn [n, prev] ->
+          [prev + (n*2), n]
+        end
+      )
+      |> Stream.map(&List.first/1)
+    )
+    |> Stream.drop(1)
+  end
+
+  @doc """
+  Returns an infinite stream of tuples, combining both the Pell numbers and the Pell-Lucas numbers.
+
+  These tuples form the closest rational approximations to the square root of 2.
+  """
+  def pell_tuples do
+    Stream.zip(
+      (pell_lucas_numbers |> Stream.map(fn x -> div(x, 2) end)), 
+      pell_numbers
+    )
+  end
+
+  @doc """
+  Returns an infinite stream of Rational numbers, combining both the Pell numbers and the Pell-Lucas numbers.
+
+  These Rational numbers form the approximations to the square root of 2.
+  The Rationals are constructed using the `Ratio` library.
+
+  ## Examples:
+
+      iex> Enum.take Sequences.pell_rationals, 10
+      [1, 3 <|> 2, 7 <|> 5, 17 <|> 12, 41 <|> 29, 99 <|> 70, 239 <|> 169, 577 <|> 408,
+      1393 <|> 985, 3363 <|> 2378]
+
+  """
+  def pell_rationals do
+    pell_tuples
+    |> Stream.map(fn {d, n} -> d <|> n end)
+  end
+
+
+  @doc """
   Defines an ascending integer Stream, containing the Prime numbers (A000040).
 
   This function uses `Sequences.Primes.trial_division` internally, although this might change in the future when more, faster prime-discovery methods are added.
@@ -327,6 +395,31 @@ defmodule Sequences do
 
   end
 
+  @doc """
+  Returns a stream of digits of the mathematical constant π (pi) including the starting `3`, using Gibbons' Spigot algorithm.
+  
+
+  This algorithm(see http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/spigot.pdf) is less fast than dedicated algorithms with a specified and fixed upper bound, 
+  but it has the advantage that you can specify exactly how many digits you need at a later time.
+
+  ## Examples: 
+
+      iex> Sequences.pi |> Enum.take(20)
+      [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3, 2, 3, 8, 4]
+  """
+  def pi do
+    {false, 0, 1, 0, 1, 1, 3, 3}
+    |> Stream.iterate(fn {_is_digit, prevn, q, r, t, k, n, l} ->
+        if (4*q + r - t) < n*t do
+          {true, n, q*10, 10*(r-n*t), t, k, div(10*(3*q+r), t) - 10*n, l}
+        else
+          {false, n, q*k, (2*q+r)*l, t*l, k+1, div(q*7*k+2+r*l, t*l), l+2}
+        end
+      end)
+    # 2. puts `n`
+    |> Stream.filter(fn {is_digit, _, _, _, _, _, _, _} -> is_digit end)
+    |> Stream.map(fn {_, prevn, _, _, _, _, _, _} -> prevn end)
+  end
 
 end
 
