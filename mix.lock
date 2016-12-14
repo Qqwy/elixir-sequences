@@ -1,4 +1,6 @@
-%{"earmark": {:hex, :earmark, "0.2.1", "ba6d26ceb16106d069b289df66751734802777a3cbb6787026dd800ffeb850f3", [:mix], []},
-  "ex_doc": {:hex, :ex_doc, "0.12.0", "b774aabfede4af31c0301aece12371cbd25995a21bb3d71d66f5c2fe074c603f", [:mix], [{:earmark, "~> 0.2", [hex: :earmark, optional: false]}]},
-  "math": {:hex, :math, "0.2.0", "e7d94733ef0f3a9051a7de58a8f30aa13bee4c7824020580a39dd19174f9cadc", [:mix], []},
-  "ratio": {:hex, :ratio, "1.1.0", "58fc61abeaab779d4096dbe727078271c1c85f1256ee83cb99ef6ff3d521db48", [:mix], []}}
+%{"decimal": {:hex, :decimal, "1.3.1", "157b3cedb2bfcb5359372a7766dd7a41091ad34578296e951f58a946fcab49c6", [:mix], []},
+  "earmark": {:hex, :earmark, "1.0.3", "89bdbaf2aca8bbb5c97d8b3b55c5dd0cff517ecc78d417e87f1d0982e514557b", [:mix], []},
+  "ex_doc": {:hex, :ex_doc, "0.14.5", "c0433c8117e948404d93ca69411dd575ec6be39b47802e81ca8d91017a0cf83c", [:mix], [{:earmark, "~> 1.0", [hex: :earmark, optional: false]}]},
+  "math": {:hex, :math, "0.2.0", "e7d94733ef0f3a9051a7de58a8f30aa13bee4c7824020580a39dd19174f9cadc", [], []},
+  "numbers": {:hex, :numbers, "2.0.1", "ddccab36d4cd201071bac8d57e1a905634ff6711681a9019e984e4cab40a3a78", [:mix], []},
+  "ratio": {:hex, :ratio, "1.2.3", "d9fd12984310ec81aec63a879e2c8826e4be64d25976354d8cbb61e6b8ca0737", [:mix], [{:numbers, "~> 2.0.0", [hex: :numbers, optional: false]}]}}

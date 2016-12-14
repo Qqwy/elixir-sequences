@@ -35,7 +35,9 @@ defmodule Sequences.Mixfile do
       # Used for the integer square root calculation.
       # TODO: Re-point to master math library as soon as functionality is merged in master branch.
       {:ratio, ">= 1.0.0"},
-      {:math, ">= 0.1.0"} 
+      {:math, ">= 0.1.0"},
+      {:numbers, "~> 2.0"},
+      {:decimal, "~> 1.0"}
     ]
   end
 
