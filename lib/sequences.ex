@@ -144,10 +144,10 @@ defmodule Sequences do
 
   ## Examples:
 
-      iex> Sequences.fibonacchi |> Enum.take(5)
+      iex> Sequences.fibonacci |> Enum.take(5)
       [1, 1, 2, 3, 5]
   """
-  def fibonacchi do
+  def fibonacci do
     Stream.iterate({1,0}, fn {n, prev} -> {n+prev, n} end)
     |> Stream.map(fn {n, _} -> n end)
   end
