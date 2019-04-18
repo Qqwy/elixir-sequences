@@ -44,32 +44,7 @@ defmodule Sequences.Mixfile do
   defp description do
     """
   The Sequences module defines multiple methods that return a Stream of numbers, usually integers.
-  
-  The different Streams can be tapped in on-demand, by running any `Enum` function on them.
-
-  For efficiency, these sequences are calculated in a way that re-uses previously calculated results whenever possible.
-
-
-  List of included sequences:
-
-  • Sequences.integers(start, step): a helper function to create any kind of lazy integer sequence with a regular step distance.
-  • Sequences.integers
-  • Sequences.positive_integers 
-  • Sequences.odd_integers
-  • Sequences.even_integers
-  • Sequences.zeroes
-  • Sequences.ones
-  • Sequences.factorials
-  • Sequences.fibonacci
-  • Sequences.catalan
-  • Sequences.triangular
-  • Sequences.primes
-  • Sequences.squareroot_tuple(n): Returns a tuple with an integer part (single integer number) and decimal part (digit stream)
-  • Sequences.squareroot_tuple(n, num_of_digits): Returns a tuple with an integer part (single integer number) and decimal part (digit list with given length)
-  • Sequences.squareroot_decimals(n): Returns decimal stream of the decimal expansion of a square root.
-  • Sequences.squareroot_expansion/1: Returns a digit stream of the decimal expansion of a square root, including the digits of the integral part at the front.
-
-  """
+    """
   end
 
   defp package do
