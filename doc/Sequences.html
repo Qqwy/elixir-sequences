@@ -1,320 +1,250 @@
-    <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
-    <title>Sequences – sequences v1.2.0</title>
-    <link rel="stylesheet" href="dist/app-1e374caa3d.css" />
-    <script src="dist/sidebar_items.js"></script>
+    <meta name="generator" content="ExDoc v0.20.2">
+    <meta name="project" content="sequences v1.2.1">
+    <title>Sequences — sequences v1.2.1</title>
+    <link rel="stylesheet" href="dist/html-d9f58a6320b5bfa6dd77.css" />
+      <link rel="canonical" href="https://hexdocs.pm/sequences/Sequences.html" />
+    <script src="dist/sidebar_items-1dffd5f540.js"></script>
+      <script src="docs_config.js"></script>
+    <script async src="dist/html-d9f58a6320b5bfa6dd77.js"></script>
+    
   </head>
   <body data-type="modules">
-
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
     <div class="main">
-<button class="sidebar-toggle">
-  <i class="icon-menu"></i>
-</button>
-<section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
-  
-  <a href="api-reference.html" class="sidebar-projectLink">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" title="Collapse/expand sidebar"></span>
+</button>
+
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button">
+      <span class="icon-cross" title="Cancel search"></span>
+    </button>
+    <label class="search-label">
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Search" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
     <div class="sidebar-projectDetails">
-      <h1 class="sidebar-projectName">
-        sequences
-      </h1>
+      <a href="api-reference.html" class="sidebar-projectName">
+sequences      </a>
       <h2 class="sidebar-projectVersion">
-        v1.2.0
+        v1.2.1
       </h2>
     </div>
-    
-  </a>
-
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
   </div>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-    
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-    
 
-    
 
-    
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
-        <small class="visible-xs">sequences v1.2.0</small>
-        Sequences
-        
-        
-      </h1>
+        <small class="app-vsn">sequences v1.2.1</small>
+Sequences              </h1>
 
-      
-        <section id="moduledoc" class="docstring">
-          <p>The Sequences module defines multiple methods that return a Stream of numbers, usually integers.</p>
-<p>The different Streams can be tapped in on-demand, by running any <code class="inline">Enum</code> function on them.
+
+        <section id="moduledoc">
+<p>The Sequences module defines multiple methods that return a Stream of numbers, usually integers.</p>
+<p>The different Streams can be tapped in on-demand, by running any <a href="https://hexdocs.pm/elixir/Enum.html"><code class="inline">Enum</code></a> function on them.
 <em>Be warned:</em> Do not use any function that iterates through the complete Stream. If you try this, <em>your code will hang</em>, as Elixir will never finish iterating through the infinite lists.</p>
 <p>For efficiency, these sequences are calculated in a way that re-uses previously calculated results whenever possible.</p>
-<p>See <a href="https://github.com/Qqwy/elixir-sequences">https://github.com/Qqwy/elixir-sequences</a> for more information.</p>
-
+<p>See https://github.com/Qqwy/elixir-sequences for more information.</p>
         </section>
-      
 
-      
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
-          
-
-          
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#catalan/0">catalan()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>An infinite Stream containing the Catalan numbers (A000108)</p>
-</div>
-  
+    <div class="summary-synopsis"><p>An infinite Stream containing the Catalan numbers (A000108).</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#even_integers/0">even_integers()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>An ascending Stream containing the even integers (A005843)</p>
-</div>
-  
+    <div class="summary-synopsis"><p>An ascending Stream containing the even integers (A005843)</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#factorials/0">factorials()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>An infinite Stream containing the Factorial numbers (A000142)</p>
-</div>
-  
+    <div class="summary-synopsis"><p>An infinite Stream containing the Factorial numbers (A000142).</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#fibonacchi/0">fibonacchi()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>An infinite Stream containing the Fibonacci numbers (A000045)</p>
-</div>
-  
+    <div class="summary-synopsis"><p>An infinite Stream containing the Fibonacci numbers (A000045).</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#integers/0">integers()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>An ascending Stream containing the nonnegative integers (A001477)</p>
-</div>
-  
+    <div class="summary-synopsis"><p>An ascending Stream containing the nonnegative integers (A001477)</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#integers/2">integers(start, step \\ 1)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Defines an infinitely continuing integer Stream, starting at <em>start</em> , with step <em>step</em> between values.
-<em>step</em> defaults to <code class="inline">1</code></p>
-</div>
-  
+<em>step</em> defaults to <code class="inline">1</code>.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#odd_integers/0">odd_integers()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>An ascending Stream containing the odd integers (A005408)</p>
-</div>
-  
+    <div class="summary-synopsis"><p>An ascending Stream containing the odd integers (A005408)</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#ones/0">ones()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>An infinite Stream of ones (A000012)</p>
-</div>
-  
+    <div class="summary-synopsis"><p>An infinite Stream of ones (A000012)</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#pell_lucas_numbers/0">pell_lucas_numbers()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Returns an infinite stream of Pell-Lucas numbers</p>
-</div>
-  
+    <div class="summary-synopsis"><p>Returns an infinite stream of Pell-Lucas numbers.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#pell_numbers/0">pell_numbers()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Returns an infinite stream of Pell numbers</p>
-</div>
-  
+    <div class="summary-synopsis"><p>Returns an infinite stream of Pell numbers.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#pell_rationals/0">pell_rationals()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Returns an infinite stream of Rational numbers, combining both the Pell numbers and the Pell-Lucas numbers</p>
-</div>
-  
+    <div class="summary-synopsis"><p>Returns an infinite stream of Rational numbers, combining both the Pell numbers and the Pell-Lucas numbers.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#pell_tuples/0">pell_tuples()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Returns an infinite stream of tuples, combining both the Pell numbers and the Pell-Lucas numbers</p>
-</div>
-  
+    <div class="summary-synopsis"><p>Returns an infinite stream of tuples, combining both the Pell numbers and the Pell-Lucas numbers.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#pi/0">pi()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Returns a stream of digits of the mathematical constant π (pi) including the starting <code class="inline">3</code>, using Gibbons’ Spigot algorithm</p>
-</div>
-  
+    <div class="summary-synopsis"><p>Returns a stream of digits of the mathematical constant π (pi) including the starting <code class="inline">3</code>, using Gibbons&#39; Spigot algorithm.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#positive_integers/0">positive_integers()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>An ascending Stream containing the positive integers (A000027)</p>
-</div>
-  
+    <div class="summary-synopsis"><p>An ascending Stream containing the positive integers (A000027)</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#primes/0">primes()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Defines an ascending integer Stream, containing the Prime numbers (A000040)</p>
-</div>
-  
+    <div class="summary-synopsis"><p>Defines an ascending integer Stream, containing the Prime numbers (A000040).</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#squareroot_decimals/1">squareroot_decimals(n)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em></p>
-</div>
-  
+    <div class="summary-synopsis"><p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em>.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#squareroot_expansion/1">squareroot_expansion(n)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em></p>
-</div>
-  
+    <div class="summary-synopsis"><p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em>.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#squareroot_tuple/1">squareroot_tuple(n)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a Stream that contains the decimal expansion of the square root of <em>n</em></p>
-</div>
-  
+    <div class="summary-synopsis"><p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a Stream that contains the decimal expansion of the square root of <em>n</em>.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#squareroot_tuple/2">squareroot_tuple(n, amount_of_digits)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a List that contains <em>amount_of_digits</em> digits of the decimal expansion of the square root of <em>n</em></p>
-</div>
-  
+    <div class="summary-synopsis"><p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a List that contains <em>amount_of_digits</em> digits of the decimal expansion of the square root of <em>n</em>.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#triangular/0">triangular()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>An infinite Stream containing the Triangular numbers (A000217)</p>
-</div>
-  
+    <div class="summary-synopsis"><p>An infinite Stream containing the Triangular numbers (A000217).</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#zeroes/0">zeroes()</a>
   </div>
-  
-    <div class="summary-synopsis"><p>An infinite Stream of zeroes (A000004)</p>
+    <div class="summary-synopsis"><p>An infinite Stream of zeroes (A000004)</p></div>
 </div>
-  
-</div>
-
   </div>
-
-
-          
-
-          
-
         </section>
-      
 
-      
-
-      
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
-            Functions
-          </h1>
-          <div class="detail" id="catalan/0">
-  <div class="detail-header">
+Functions          </h1>
+          <div class="functions-list">
+<section class="detail" id="catalan/0">
+    <div class="detail-header">
     <a href="#catalan/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">catalan()</span>
-      
-  </div>
-  
+    <h1 class="signature">catalan()</span>
+          </div>
   <section class="docstring">
-    <p>An infinite Stream containing the Catalan numbers (A000108).</p>
+<p>An infinite Stream containing the Catalan numbers (A000108).</p>
 <p>Runs in O(n²), memory consumption is O(n²)</p>
-<h2>Definition:</h2>
+<h2 id="catalan/0-definition" class="section-heading">
+  <a href="#catalan/0-definition" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Definition:
+</h2>
+
 <ul>
 <li>C(0) = 1
 </li>
@@ -323,67 +253,81 @@
 <li>C(n) = Σ( C(i) * C(n-i)) for all i &lt;- 0 &lt;= i &lt; n
 </li>
 </ul>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.catalan |&gt; Enum.take(5)
-[1, 2, 5, 14, 42]</code></pre>
+<h2 id="catalan/0-examples" class="section-heading">
+  <a href="#catalan/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">catalan</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="6847171554-1">(</span><span class="mi">5</span><span class="p" data-group-id="6847171554-1">)</span><span class="w">
+</span><span class="p" data-group-id="6847171554-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="mi">42</span><span class="p" data-group-id="6847171554-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="even_integers/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="even_integers/0">
+    <div class="detail-header">
     <a href="#even_integers/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">even_integers()</span>
-      
-  </div>
-  
+    <h1 class="signature">even_integers()</span>
+          </div>
   <section class="docstring">
-    <p>An ascending Stream containing the even integers (A005843)</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.even_integers |&gt; Enum.take(5)
-[0,2,4,6,8]</code></pre>
+<p>An ascending Stream containing the even integers (A005843)</p>
+<h2 id="even_integers/0-examples" class="section-heading">
+  <a href="#even_integers/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">even_integers</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="8493622367-1">(</span><span class="mi">5</span><span class="p" data-group-id="8493622367-1">)</span><span class="w">
+</span><span class="p" data-group-id="8493622367-2">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p" data-group-id="8493622367-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="factorials/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="factorials/0">
+    <div class="detail-header">
     <a href="#factorials/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">factorials()</span>
-      
-  </div>
-  
+    <h1 class="signature">factorials()</span>
+          </div>
   <section class="docstring">
-    <p>An infinite Stream containing the Factorial numbers (A000142).</p>
+<p>An infinite Stream containing the Factorial numbers (A000142).</p>
 <p>Runs in O(n)</p>
-<h2>Definition:</h2>
+<h2 id="factorials/0-definition" class="section-heading">
+  <a href="#factorials/0-definition" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Definition:
+</h2>
+
 <ul>
 <li>fact(0) = 1
 </li>
 <li>fact(n) = n * fact(n-1)
 </li>
 </ul>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.factorials |&gt; Enum.take(5)
-[1, 1, 2, 6, 24]</code></pre>
+<h2 id="factorials/0-examples" class="section-heading">
+  <a href="#factorials/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">factorials</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="5129953378-1">(</span><span class="mi">5</span><span class="p" data-group-id="5129953378-1">)</span><span class="w">
+</span><span class="p" data-group-id="5129953378-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p" data-group-id="5129953378-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="fibonacchi/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="fibonacchi/0">
+    <div class="detail-header">
     <a href="#fibonacchi/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">fibonacchi()</span>
-      
-  </div>
-  
+    <h1 class="signature">fibonacchi()</span>
+          </div>
   <section class="docstring">
-    <p>An infinite Stream containing the Fibonacci numbers (A000045).</p>
+<p>An infinite Stream containing the Fibonacci numbers (A000045).</p>
 <p>Runs in O(n)</p>
-<h2>Definition:</h2>
+<h2 id="fibonacchi/0-definition" class="section-heading">
+  <a href="#fibonacchi/0-definition" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Definition:
+</h2>
+
 <ul>
 <li>fib(0) = 1
 </li>
@@ -392,299 +336,329 @@
 <li>fib(n) = fib(n-1) + fib(n-2)
 </li>
 </ul>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.fibonacchi |&gt; Enum.take(5)
-[1, 1, 2, 3, 5]</code></pre>
+<h2 id="fibonacchi/0-examples" class="section-heading">
+  <a href="#fibonacchi/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">fibonacchi</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="4881296770-1">(</span><span class="mi">5</span><span class="p" data-group-id="4881296770-1">)</span><span class="w">
+</span><span class="p" data-group-id="4881296770-2">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p" data-group-id="4881296770-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="integers/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="integers/0">
+    <div class="detail-header">
     <a href="#integers/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">integers()</span>
-      
-  </div>
-  
+    <h1 class="signature">integers()</span>
+          </div>
   <section class="docstring">
-    <p>An ascending Stream containing the nonnegative integers (A001477)</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.integers |&gt; Enum.take(5)
-[0,1,2,3,4]</code></pre>
+<p>An ascending Stream containing the nonnegative integers (A001477)</p>
+<h2 id="integers/0-examples" class="section-heading">
+  <a href="#integers/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">integers</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="2215858440-1">(</span><span class="mi">5</span><span class="p" data-group-id="2215858440-1">)</span><span class="w">
+</span><span class="p" data-group-id="2215858440-2">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p" data-group-id="2215858440-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="integers/2">
+</section>
+<section class="detail" id="integers/2">
+  
+    <span id="integers/1"></span>
   <div class="detail-header">
     <a href="#integers/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">integers(start, step \\ 1)</span>
-      
-  </div>
-  
+    <h1 class="signature">integers(start, step \\ 1)</span>
+          </div>
   <section class="docstring">
-    <p>Defines an infinitely continuing integer Stream, starting at <em>start</em> , with step <em>step</em> between values.
+<p>Defines an infinitely continuing integer Stream, starting at <em>start</em> , with step <em>step</em> between values.
 <em>step</em> defaults to <code class="inline">1</code>.</p>
-<h2>Usage:</h2>
+<h2 id="integers/2-usage" class="section-heading">
+  <a href="#integers/2-usage" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Usage:
+</h2>
+
 <p>Sequences.integers(start, step)</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.integers(0,3) |&gt; Enum.take(5)
-[0,3,6,9,12]
+<h2 id="integers/2-examples" class="section-heading">
+  <a href="#integers/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
-iex&gt; Sequences.integers(10,-1) |&gt; Enum.take(5)
-[10,9,8,7,6]</code></pre>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">integers</span><span class="p" data-group-id="2127693608-1">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p" data-group-id="2127693608-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="2127693608-2">(</span><span class="mi">5</span><span class="p" data-group-id="2127693608-2">)</span><span class="w">
+</span><span class="p" data-group-id="2127693608-3">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p" data-group-id="2127693608-3">]</span><span class="w">
 
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">integers</span><span class="p" data-group-id="2127693608-4">(</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p" data-group-id="2127693608-4">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="2127693608-5">(</span><span class="mi">5</span><span class="p" data-group-id="2127693608-5">)</span><span class="w">
+</span><span class="p" data-group-id="2127693608-6">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p" data-group-id="2127693608-6">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="odd_integers/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="odd_integers/0">
+    <div class="detail-header">
     <a href="#odd_integers/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">odd_integers()</span>
-      
-  </div>
-  
+    <h1 class="signature">odd_integers()</span>
+          </div>
   <section class="docstring">
-    <p>An ascending Stream containing the odd integers (A005408)</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.odd_integers |&gt; Enum.take(5)
-[1,3,5,7,9]</code></pre>
+<p>An ascending Stream containing the odd integers (A005408)</p>
+<h2 id="odd_integers/0-examples" class="section-heading">
+  <a href="#odd_integers/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">odd_integers</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="7464401706-1">(</span><span class="mi">5</span><span class="p" data-group-id="7464401706-1">)</span><span class="w">
+</span><span class="p" data-group-id="7464401706-2">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">9</span><span class="p" data-group-id="7464401706-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="ones/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="ones/0">
+    <div class="detail-header">
     <a href="#ones/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">ones()</span>
-      
-  </div>
-  
+    <h1 class="signature">ones()</span>
+          </div>
   <section class="docstring">
-    <p>An infinite Stream of ones (A000012)</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.ones |&gt; Enum.take(5)
-[1,1,1,1,1]</code></pre>
+<p>An infinite Stream of ones (A000012)</p>
+<h2 id="ones/0-examples" class="section-heading">
+  <a href="#ones/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">ones</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="5769558988-1">(</span><span class="mi">5</span><span class="p" data-group-id="5769558988-1">)</span><span class="w">
+</span><span class="p" data-group-id="5769558988-2">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p" data-group-id="5769558988-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="pell_lucas_numbers/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="pell_lucas_numbers/0">
+    <div class="detail-header">
     <a href="#pell_lucas_numbers/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">pell_lucas_numbers()</span>
-      
-  </div>
-  
+    <h1 class="signature">pell_lucas_numbers()</span>
+          </div>
   <section class="docstring">
-    <p>Returns an infinite stream of Pell-Lucas numbers.</p>
+<p>Returns an infinite stream of Pell-Lucas numbers.</p>
 <p>Pell-Lucas numbers are the numerators of the closest rational approximations to the square root of 2.</p>
-
   </section>
-</div>
-<div class="detail" id="pell_numbers/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="pell_numbers/0">
+    <div class="detail-header">
     <a href="#pell_numbers/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">pell_numbers()</span>
-      
-  </div>
-  
+    <h1 class="signature">pell_numbers()</span>
+          </div>
   <section class="docstring">
-    <p>Returns an infinite stream of Pell numbers.</p>
+<p>Returns an infinite stream of Pell numbers.</p>
 <p>Pell numbers are the denominators of the closest rational approximations to the square root of 2.</p>
-
   </section>
-</div>
-<div class="detail" id="pell_rationals/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="pell_rationals/0">
+    <div class="detail-header">
     <a href="#pell_rationals/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">pell_rationals()</span>
-      
-  </div>
-  
+    <h1 class="signature">pell_rationals()</span>
+          </div>
   <section class="docstring">
-    <p>Returns an infinite stream of Rational numbers, combining both the Pell numbers and the Pell-Lucas numbers.</p>
+<p>Returns an infinite stream of Rational numbers, combining both the Pell numbers and the Pell-Lucas numbers.</p>
 <p>These Rational numbers form the approximations to the square root of 2.
-The Rationals are constructed using the <code class="inline">Ratio</code> library.</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Enum.take Sequences.pell_rationals, 10
-[1, 3 &lt;|&gt; 2, 7 &lt;|&gt; 5, 17 &lt;|&gt; 12, 41 &lt;|&gt; 29, 99 &lt;|&gt; 70, 239 &lt;|&gt; 169, 577 &lt;|&gt; 408,
-1393 &lt;|&gt; 985, 3363 &lt;|&gt; 2378]</code></pre>
+The Rationals are constructed using the <a href="https://hexdocs.pm/ratio/2.2.2/Ratio.html"><code class="inline">Ratio</code></a> library.</p>
+<h2 id="pell_rationals/0-examples" class="section-heading">
+  <a href="#pell_rationals/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="w"> </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">pell_rationals</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w">
+</span><span class="p" data-group-id="3074767819-1">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">&lt;|&gt;</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="o">&lt;|&gt;</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">17</span><span class="w"> </span><span class="o">&lt;|&gt;</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="w"> </span><span class="o">&lt;|&gt;</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="w"> </span><span class="o">&lt;|&gt;</span><span class="w"> </span><span class="mi">70</span><span class="p">,</span><span class="w"> </span><span class="mi">239</span><span class="w"> </span><span class="o">&lt;|&gt;</span><span class="w"> </span><span class="mi">169</span><span class="p">,</span><span class="w"> </span><span class="mi">577</span><span class="w"> </span><span class="o">&lt;|&gt;</span><span class="w"> </span><span class="mi">408</span><span class="p">,</span><span class="w">
+</span><span class="mi">1393</span><span class="w"> </span><span class="o">&lt;|&gt;</span><span class="w"> </span><span class="mi">985</span><span class="p">,</span><span class="w"> </span><span class="mi">3363</span><span class="w"> </span><span class="o">&lt;|&gt;</span><span class="w"> </span><span class="mi">2378</span><span class="p" data-group-id="3074767819-1">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="pell_tuples/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="pell_tuples/0">
+    <div class="detail-header">
     <a href="#pell_tuples/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">pell_tuples()</span>
-      
-  </div>
-  
+    <h1 class="signature">pell_tuples()</span>
+          </div>
   <section class="docstring">
-    <p>Returns an infinite stream of tuples, combining both the Pell numbers and the Pell-Lucas numbers.</p>
+<p>Returns an infinite stream of tuples, combining both the Pell numbers and the Pell-Lucas numbers.</p>
 <p>These tuples form the closest rational approximations to the square root of 2.</p>
-
   </section>
-</div>
-<div class="detail" id="pi/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="pi/0">
+    <div class="detail-header">
     <a href="#pi/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">pi()</span>
-      
-  </div>
-  
+    <h1 class="signature">pi()</span>
+          </div>
   <section class="docstring">
-    <p>Returns a stream of digits of the mathematical constant π (pi) including the starting <code class="inline">3</code>, using Gibbons’ Spigot algorithm.</p>
-<p>This algorithm(see <a href="http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/spigot.pdf">http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/spigot.pdf</a>) is less fast than dedicated algorithms with a specified and fixed upper bound, 
+<p>Returns a stream of digits of the mathematical constant π (pi) including the starting <code class="inline">3</code>, using Gibbons&#39; Spigot algorithm.</p>
+<p>This algorithm(see http://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/spigot.pdf) is less fast than dedicated algorithms with a specified and fixed upper bound, 
 but it has the advantage that you can specify exactly how many digits you need at a later time.</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.pi |&gt; Enum.take(20)
-[3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7, 9, 3, 2, 3, 8, 4]</code></pre>
+<h2 id="pi/0-examples" class="section-heading">
+  <a href="#pi/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">pi</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="7207708704-1">(</span><span class="mi">20</span><span class="p" data-group-id="7207708704-1">)</span><span class="w">
+</span><span class="p" data-group-id="7207708704-2">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="7207708704-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="positive_integers/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="positive_integers/0">
+    <div class="detail-header">
     <a href="#positive_integers/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">positive_integers()</span>
-      
-  </div>
-  
+    <h1 class="signature">positive_integers()</span>
+          </div>
   <section class="docstring">
-    <p>An ascending Stream containing the positive integers (A000027)</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.positive_integers |&gt; Enum.take(5)
-[1,2,3,4,5]</code></pre>
+<p>An ascending Stream containing the positive integers (A000027)</p>
+<h2 id="positive_integers/0-examples" class="section-heading">
+  <a href="#positive_integers/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">positive_integers</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="5138443993-1">(</span><span class="mi">5</span><span class="p" data-group-id="5138443993-1">)</span><span class="w">
+</span><span class="p" data-group-id="5138443993-2">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p" data-group-id="5138443993-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="primes/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="primes/0">
+    <div class="detail-header">
     <a href="#primes/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">primes()</span>
-      
-  </div>
-  
+    <h1 class="signature">primes()</span>
+          </div>
   <section class="docstring">
-    <p>Defines an ascending integer Stream, containing the Prime numbers (A000040).</p>
+<p>Defines an ascending integer Stream, containing the Prime numbers (A000040).</p>
 <p>This function uses <code class="inline">Sequences.Primes.trial_division</code> internally, although this might change in the future when more, faster prime-discovery methods are added.</p>
 <p>Runs in O(n*sqrt(n)/ln(n)²)</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.primes |&gt; Enum.take(10)
-[2,3,5,7,11,13,17,19,23,29]</code></pre>
+<h2 id="primes/0-examples" class="section-heading">
+  <a href="#primes/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">primes</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="6772074916-1">(</span><span class="mi">10</span><span class="p" data-group-id="6772074916-1">)</span><span class="w">
+</span><span class="p" data-group-id="6772074916-2">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">29</span><span class="p" data-group-id="6772074916-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="squareroot_decimals/1">
-  <div class="detail-header">
+</section>
+<section class="detail" id="squareroot_decimals/1">
+    <div class="detail-header">
     <a href="#squareroot_decimals/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">squareroot_decimals(n)</span>
-      
-  </div>
-  
+    <h1 class="signature">squareroot_decimals(n)</span>
+          </div>
   <section class="docstring">
-    <p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em>.</p>
+<p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em>.</p>
 <p>The decimal expansion is calculated using the Square Roots By Extraction technique <a href="http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf">described here</a>.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.squareroot_decimals(2) |&gt; Enum.take(20)
-[4, 1, 4, 2, 1, 3, 5, 6, 2, 3, 7, 3, 0, 9, 5, 0, 4, 8, 8, 0]
-iex&gt; Sequences.squareroot_decimals(100) |&gt; Enum.take(20)
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</code></pre>
+<h2 id="squareroot_decimals/1-examples" class="section-heading">
+  <a href="#squareroot_decimals/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">squareroot_decimals</span><span class="p" data-group-id="6261412878-1">(</span><span class="mi">2</span><span class="p" data-group-id="6261412878-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="6261412878-2">(</span><span class="mi">20</span><span class="p" data-group-id="6261412878-2">)</span><span class="w">
+</span><span class="p" data-group-id="6261412878-3">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="6261412878-3">]</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">squareroot_decimals</span><span class="p" data-group-id="6261412878-4">(</span><span class="mi">100</span><span class="p" data-group-id="6261412878-4">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="6261412878-5">(</span><span class="mi">20</span><span class="p" data-group-id="6261412878-5">)</span><span class="w">
+</span><span class="p" data-group-id="6261412878-6">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="6261412878-6">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="squareroot_expansion/1">
-  <div class="detail-header">
+</section>
+<section class="detail" id="squareroot_expansion/1">
+    <div class="detail-header">
     <a href="#squareroot_expansion/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">squareroot_expansion(n)</span>
-      
-  </div>
-  
+    <h1 class="signature">squareroot_expansion(n)</span>
+          </div>
   <section class="docstring">
-    <p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em>.</p>
+<p>Returns a Stream of values 1-9, representing the decimal expansion of the square root of <em>n</em>.</p>
 <p>Note that <a href="#squareroot_expansion/1"><code class="inline">squareroot_expansion/1</code></a> does not strip away the integral part at the front. Use <a href="#squareroot_decimals/1"><code class="inline">squareroot_decimals/1</code></a> for that.</p>
 <p>The decimal expansion is calculated using the Square Roots By Extraction technique <a href="http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf">described here</a>.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.squareroot_expansion(2) |&gt; Enum.take(20)
-[1, 4, 1, 4, 2, 1, 3, 5, 6, 2, 3, 7, 3, 0, 9, 5, 0, 4, 8, 8]
-iex&gt; Sequences.squareroot_expansion(100) |&gt; Enum.take(20)
-[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</code></pre>
+<h2 id="squareroot_expansion/1-examples" class="section-heading">
+  <a href="#squareroot_expansion/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">squareroot_expansion</span><span class="p" data-group-id="8776275339-1">(</span><span class="mi">2</span><span class="p" data-group-id="8776275339-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="8776275339-2">(</span><span class="mi">20</span><span class="p" data-group-id="8776275339-2">)</span><span class="w">
+</span><span class="p" data-group-id="8776275339-3">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p" data-group-id="8776275339-3">]</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">squareroot_expansion</span><span class="p" data-group-id="8776275339-4">(</span><span class="mi">100</span><span class="p" data-group-id="8776275339-4">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="8776275339-5">(</span><span class="mi">20</span><span class="p" data-group-id="8776275339-5">)</span><span class="w">
+</span><span class="p" data-group-id="8776275339-6">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="8776275339-6">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="squareroot_tuple/1">
-  <div class="detail-header">
+</section>
+<section class="detail" id="squareroot_tuple/1">
+    <div class="detail-header">
     <a href="#squareroot_tuple/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">squareroot_tuple(n)</span>
-      
-  </div>
-  
+    <h1 class="signature">squareroot_tuple(n)</span>
+          </div>
   <section class="docstring">
-    <p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a Stream that contains the decimal expansion of the square root of <em>n</em>.</p>
+<p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a Stream that contains the decimal expansion of the square root of <em>n</em>.</p>
 <p>The decimal expansion is calculated using the Square Roots By Extraction technique <a href="http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf">described here</a>.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; {a, b} = Sequences.squareroot_tuple(42); {a, Enum.take(b, 10)}
-{6, [4, 8, 0, 7, 4, 0, 6, 9, 8, 4]}</code></pre>
+<h2 id="squareroot_tuple/1-examples" class="section-heading">
+  <a href="#squareroot_tuple/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="9841985944-1">{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p" data-group-id="9841985944-1">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">squareroot_tuple</span><span class="p" data-group-id="9841985944-2">(</span><span class="mi">42</span><span class="p" data-group-id="9841985944-2">)</span><span class="p">;</span><span class="w"> </span><span class="p" data-group-id="9841985944-3">{</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="9841985944-4">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="9841985944-4">)</span><span class="p" data-group-id="9841985944-3">}</span><span class="w">
+</span><span class="p" data-group-id="9841985944-5">{</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="9841985944-6">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="9841985944-6">]</span><span class="p" data-group-id="9841985944-5">}</span></code></pre>
   </section>
-</div>
-<div class="detail" id="squareroot_tuple/2">
-  <div class="detail-header">
+</section>
+<section class="detail" id="squareroot_tuple/2">
+    <div class="detail-header">
     <a href="#squareroot_tuple/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">squareroot_tuple(n, amount_of_digits)</span>
-      
-  </div>
-  
+    <h1 class="signature">squareroot_tuple(n, amount_of_digits)</span>
+          </div>
   <section class="docstring">
-    <p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a List that contains <em>amount_of_digits</em> digits of the decimal expansion of the square root of <em>n</em>.</p>
+<p>Returns a tuple where the first value is the integer square root of <em>n</em>, and the second value is a List that contains <em>amount_of_digits</em> digits of the decimal expansion of the square root of <em>n</em>.</p>
 <p>The decimal expansion is calculated using the Square Roots By Extraction technique <a href="http://www.afjarvis.staff.shef.ac.uk/maths/jarvisspec02.pdf">described here</a>.</p>
-<h2>Examples</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.squareroot_tuple(100, 3)
-{10, [0, 0, 0]}
-iex&gt; Sequences.squareroot_tuple(2, 10)
-{1, [4, 1, 4, 2, 1, 3, 5, 6, 2, 3]}
-iex&gt; Sequences.squareroot_tuple(82, 10)
-{9, [0, 5, 5, 3, 8, 5, 1, 3, 8, 1]}</code></pre>
+<h2 id="squareroot_tuple/2-examples" class="section-heading">
+  <a href="#squareroot_tuple/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">squareroot_tuple</span><span class="p" data-group-id="3837055370-1">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="3837055370-1">)</span><span class="w">
+</span><span class="p" data-group-id="3837055370-2">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3837055370-3">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="3837055370-3">]</span><span class="p" data-group-id="3837055370-2">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">squareroot_tuple</span><span class="p" data-group-id="3837055370-4">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="3837055370-4">)</span><span class="w">
+</span><span class="p" data-group-id="3837055370-5">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3837055370-6">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="3837055370-6">]</span><span class="p" data-group-id="3837055370-5">}</span><span class="w">
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">squareroot_tuple</span><span class="p" data-group-id="3837055370-7">(</span><span class="mi">82</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="3837055370-7">)</span><span class="w">
+</span><span class="p" data-group-id="3837055370-8">{</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="p" data-group-id="3837055370-9">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="3837055370-9">]</span><span class="p" data-group-id="3837055370-8">}</span></code></pre>
   </section>
-</div>
-<div class="detail" id="triangular/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="triangular/0">
+    <div class="detail-header">
     <a href="#triangular/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">triangular()</span>
-      
-  </div>
-  
+    <h1 class="signature">triangular()</span>
+          </div>
   <section class="docstring">
-    <p>An infinite Stream containing the Triangular numbers (A000217).</p>
-<h2>Definition</h2>
+<p>An infinite Stream containing the Triangular numbers (A000217).</p>
+<h2 id="triangular/0-definition" class="section-heading">
+  <a href="#triangular/0-definition" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Definition
+</h2>
+
 <ul>
 <li>L(0) = 0
 </li>
@@ -693,53 +667,61 @@ iex&gt; Sequences.squareroot_tuple(82, 10)
 <li>L(n) = L(n-2)+(2*n)-1
 </li>
 </ul>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.triangular |&gt; Enum.take(5)
-[0, 1, 3, 6, 10]</code></pre>
+<h2 id="triangular/0-examples" class="section-heading">
+  <a href="#triangular/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">triangular</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="3476160395-1">(</span><span class="mi">5</span><span class="p" data-group-id="3476160395-1">)</span><span class="w">
+</span><span class="p" data-group-id="3476160395-2">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p" data-group-id="3476160395-2">]</span></code></pre>
   </section>
-</div>
-<div class="detail" id="zeroes/0">
-  <div class="detail-header">
+</section>
+<section class="detail" id="zeroes/0">
+    <div class="detail-header">
     <a href="#zeroes/0" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">zeroes()</span>
-      
-  </div>
-  
+    <h1 class="signature">zeroes()</span>
+          </div>
   <section class="docstring">
-    <p>An infinite Stream of zeroes (A000004)</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.zeroes |&gt; Enum.take(5)
-[0,0,0,0,0]</code></pre>
+<p>An infinite Stream of zeroes (A000004)</p>
+<h2 id="zeroes/0-examples" class="section-heading">
+  <a href="#zeroes/0-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">zeroes</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="1518728055-1">(</span><span class="mi">5</span><span class="p" data-group-id="1518728055-1">)</span><span class="w">
+</span><span class="p" data-group-id="1518728055-2">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p" data-group-id="1518728055-2">]</span></code></pre>
   </section>
-</div>
-
+</section>
+          </div>
         </section>
-      
-
-      
-
-      
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.20.2),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+        </p>
+        <p>
+          <button class="line footer-button night-mode-toggle">
+            Toggle night mode
+          </button>
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
+        </p>
+      </footer>
+    </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-6d2e071366.js"></script>
+  
   </body>
 </html>
 

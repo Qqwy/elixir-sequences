@@ -258,8 +258,8 @@ defmodule Sequences do
   """
   def pell_tuples do
     Stream.zip(
-      (pell_lucas_numbers |> Stream.map(fn x -> div(x, 2) end)), 
-      pell_numbers
+      (pell_lucas_numbers() |> Stream.map(fn x -> div(x, 2) end)),
+      pell_numbers()
     )
   end
 
@@ -277,7 +277,7 @@ defmodule Sequences do
 
   """
   def pell_rationals do
-    pell_tuples
+    pell_tuples()
     |> Stream.map(fn {d, n} -> d <|> n end)
   end
 
@@ -409,7 +409,7 @@ defmodule Sequences do
   """
   def pi do
     {false, 0, 1, 0, 1, 1, 3, 3}
-    |> Stream.iterate(fn {_is_digit, prevn, q, r, t, k, n, l} ->
+    |> Stream.iterate(fn {_is_digit, _prevn, q, r, t, k, n, l} ->
         if (4*q + r - t) < n*t do
           {true, n, q*10, 10*(r-n*t), t, k, div(10*(3*q+r), t) - 10*n, l}
         else

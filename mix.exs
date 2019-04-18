@@ -43,7 +43,7 @@ defmodule Sequences.Mixfile do
 
   defp description do
     """
-  The Sequences module defines multiple methods that return a Stream of numbers, usually integers.
+    The Sequences module defines multiple methods that return a Stream of numbers, usually integers.
     """
   end
 

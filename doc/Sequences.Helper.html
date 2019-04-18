@@ -1,189 +1,176 @@
-    <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="ExDoc v0.11.4">
-    <title>Sequences.Helper – sequences v1.2.0</title>
-    <link rel="stylesheet" href="dist/app-1e374caa3d.css" />
-    <script src="dist/sidebar_items.js"></script>
+    <meta name="generator" content="ExDoc v0.20.2">
+    <meta name="project" content="sequences v1.2.1">
+    <title>Sequences.Helper — sequences v1.2.1</title>
+    <link rel="stylesheet" href="dist/html-d9f58a6320b5bfa6dd77.css" />
+      <link rel="canonical" href="https://hexdocs.pm/sequences/Sequences.Helper.html" />
+    <script src="dist/sidebar_items-1dffd5f540.js"></script>
+      <script src="docs_config.js"></script>
+    <script async src="dist/html-d9f58a6320b5bfa6dd77.js"></script>
+    
   </head>
   <body data-type="modules">
-
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
     <div class="main">
-<button class="sidebar-toggle">
-  <i class="icon-menu"></i>
-</button>
-<section class="sidebar">
-  <button class="sidebar-toggle">
-    <i class="icon-menu"></i>
-  </button>
 
-  
-  <a href="api-reference.html" class="sidebar-projectLink">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" title="Collapse/expand sidebar"></span>
+</button>
+
+<section class="sidebar">
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <button type="button" tabindex="-1" class="search-close-button">
+      <span class="icon-cross" title="Cancel search"></span>
+    </button>
+    <label class="search-label">
+      <input name="q" type="text" id="search-list" class="search-input" placeholder="Search..." aria-label="Search" autocomplete="off" />
+    </label>
+  </form>
+
+  <div class="autocomplete">
+    <div class="autocomplete-results">
+    </div>
+  </div>
+
+  <div class="sidebar-header">
     <div class="sidebar-projectDetails">
-      <h1 class="sidebar-projectName">
-        sequences
-      </h1>
+      <a href="api-reference.html" class="sidebar-projectName">
+sequences      </a>
       <h2 class="sidebar-projectVersion">
-        v1.2.0
+        v1.2.1
       </h2>
     </div>
-    
-  </a>
-
-  <div class="sidebar-search">
-    <i class="icon-search"></i>
-    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
   </div>
 
   <ul class="sidebar-listNav">
     <li><a id="extras-list" href="#full-list">Pages</a></li>
 
-    
       <li><a id="modules-list" href="#full-list">Modules</a></li>
-    
 
-    
 
-    
   </ul>
-
+  <div class="gradient"></div>
   <ul id="full-list" class="sidebar-fullList"></ul>
-  <div class="sidebar-noResults"></div>
 </section>
 
 <section class="content">
-  <div id="content" class="content-inner">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
 
 
       <h1>
-        <small class="visible-xs">sequences v1.2.0</small>
-        Sequences.Helper
-        
-        
-      </h1>
+        <small class="app-vsn">sequences v1.2.1</small>
+Sequences.Helper              </h1>
 
-      
-        <section id="moduledoc" class="docstring">
-          <p>This module contains a few helper methods for the creation and manipulation of certain Sequences.  </p>
 
+        <section id="moduledoc">
+<p>This module contains a few helper methods for the creation and manipulation of certain Sequences.  </p>
         </section>
-      
 
-      
         <section id="summary" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#summary">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
             Summary
           </h1>
-          
-
-          
   <div class="summary-functions summary">
     <h2>
       <a href="#functions">Functions</a>
     </h2>
-    <div class="summary-row">
+<div class="summary-row">
   <div class="summary-signature">
     <a href="#divisible_by_any?/2">divisible_by_any?(num, list)</a>
   </div>
-  
     <div class="summary-synopsis"><p>Returns <code class="inline">true</code> if <em>num</em> is divisible by any element in <em>list</em> (otherwise <code class="inline">false</code>).
-Stops evaluating the list as soon as a match is found</p>
-</div>
-  
+Stops evaluating the list as soon as a match is found.</p></div>
 </div>
 <div class="summary-row">
   <div class="summary-signature">
     <a href="#up_to_root/2">up_to_root(collection_of_numbers, max)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Takes elements from the given <code class="inline">collection_of_numbers</code> while the items in the collection are smaller than the square root of the given <code class="inline">max</code></p>
+    <div class="summary-synopsis"><p>Takes elements from the given <code class="inline">collection_of_numbers</code> while the items in the collection are smaller than the square root of the given <code class="inline">max</code>.</p></div>
 </div>
-  
-</div>
-
   </div>
-
-
-          
-
-          
-
         </section>
-      
 
-      
-
-      
         <section id="functions" class="details-list">
           <h1 class="section-heading">
             <a class="hover-link" href="#functions">
-              <i class="icon-link"></i>
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
             </a>
-            Functions
-          </h1>
-          <div class="detail" id="divisible_by_any?/2">
-  <div class="detail-header">
+Functions          </h1>
+          <div class="functions-list">
+<section class="detail" id="divisible_by_any?/2">
+    <div class="detail-header">
     <a href="#divisible_by_any?/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">divisible_by_any?(num, list)</span>
-      
-  </div>
-  
+    <h1 class="signature">divisible_by_any?(num, list)</span>
+          </div>
   <section class="docstring">
-    <p>Returns <code class="inline">true</code> if <em>num</em> is divisible by any element in <em>list</em> (otherwise <code class="inline">false</code>).
+<p>Returns <code class="inline">true</code> if <em>num</em> is divisible by any element in <em>list</em> (otherwise <code class="inline">false</code>).
 Stops evaluating the list as soon as a match is found.</p>
-
   </section>
-</div>
-<div class="detail" id="up_to_root/2">
-  <div class="detail-header">
+</section>
+<section class="detail" id="up_to_root/2">
+    <div class="detail-header">
     <a href="#up_to_root/2" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">up_to_root(collection_of_numbers, max)</span>
-      
-  </div>
-  
+    <h1 class="signature">up_to_root(collection_of_numbers, max)</span>
+          </div>
   <section class="docstring">
-    <p>Takes elements from the given <code class="inline">collection_of_numbers</code> while the items in the collection are smaller than the square root of the given <code class="inline">max</code>.</p>
+<p>Takes elements from the given <code class="inline">collection_of_numbers</code> while the items in the collection are smaller than the square root of the given <code class="inline">max</code>.</p>
 <p>It expects the collection_of_numbers to be in ascending format.</p>
-<h2>Examples:</h2>
-<pre><code class="iex elixir">iex&gt; Sequences.integers(0,2) |&gt; Sequences.Helper.up_to_root(100) |&gt; Enum.take(20)
-[0,2,4,6,8]</code></pre>
+<h2 id="up_to_root/2-examples" class="section-heading">
+  <a href="#up_to_root/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
 
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Sequences</span><span class="o">.</span><span class="n">integers</span><span class="p" data-group-id="7315856273-1">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p" data-group-id="7315856273-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Sequences.Helper</span><span class="o">.</span><span class="n">up_to_root</span><span class="p" data-group-id="7315856273-2">(</span><span class="mi">100</span><span class="p" data-group-id="7315856273-2">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">take</span><span class="p" data-group-id="7315856273-3">(</span><span class="mi">20</span><span class="p" data-group-id="7315856273-3">)</span><span class="w">
+</span><span class="p" data-group-id="7315856273-4">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p" data-group-id="7315856273-4">]</span></code></pre>
   </section>
-</div>
-
+</section>
+          </div>
         </section>
-      
-
-      
-
-      
-        <footer class="footer">
-      <p>
-        <span class="line">
-          Built using
-          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.11.4),
-        </span>
-        <span class="line">
-          designed by
-          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.20.2),
           </span>
-      </p>
-      <button class="night-mode-toggle" />
-    </footer>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+        </p>
+        <p>
+          <button class="line footer-button night-mode-toggle">
+            Toggle night mode
+          </button>
+          <button class="line footer-button display-shortcuts-help">
+            Display keyboard shortcuts
+          </button>
+        </p>
+      </footer>
+    </div>
   </div>
 </section>
 </div>
-  <script src="dist/app-6d2e071366.js"></script>
+  
   </body>
 </html>
 
