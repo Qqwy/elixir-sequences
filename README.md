@@ -63,5 +63,6 @@ This package is [available in Hex](https://hex.pm/packages/sequences)
 
 ## Changelog
 
+- 1.1.1: Update dependency versions to newer ones. Drops support for Elixir < 1.3
 - 1.1.0: Sequences for square root expansions.
 - 1.0.0: First fully-functional version.
